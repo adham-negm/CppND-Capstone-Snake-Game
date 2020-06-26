@@ -29,3 +29,55 @@ In this project, you can build your own C++ application or extend this Snake gam
 2. Make a build directory in the top level directory: `mkdir build && cd build`
 3. Compile: `cmake .. && make`
 4. Run it: `./SnakeGame`.
+
+## Added Feature
+
+* Added a new type of food that acts as a powerup 
+* There are 4 types of powerups and they're spawned randomely every fifth food placement
+* each power have a different color and effect
+  * Red 	 -> Increases snake length
+  * Green	 -> Decrease snake length
+  * Blue 	 -> Decrease snake speed
+  * Purple -> Increase snake speed
+
+## Rubric Points
+
+* The project demonstrates an understanding of C++ functions and control structures. can be seen in snake.cpp line 70 in function "SuperGrow"
+
+
+* The project uses Object Oriented Programming techniques. snake.h line 18 in the new class "Food"
+
+* Classes use appropriate access specifiers for class members. snake.h line 18 in the new class "Food"
+
+* Class constructors utilize member initialization lists. snake.h line 18 in the new class "Food"  
+
+* Classes encapsulate behavior. snake.h line 18 in the new class "Food" encapsulate "FoodType"
+
+* The project uses multithreading. game.cpp line 118 in creating a thread to perform the enlargment function
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
