@@ -59,7 +59,7 @@ void Game::PlaceFood() {
 		x = random_w(engine);
 		y = random_h(engine);
 
-		if((!(score%2)) && score>0)
+		if((!(score%5)) && score>0)
 		{
 			randomEffect = (rand() % 4 + 1);
 			food.SetFoodType((FoodType)randomEffect);
