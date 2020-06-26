@@ -3,6 +3,32 @@
 
 #include <vector>
 #include "SDL.h"
+#include <thread>
+
+enum FoodType //creating a new type of food
+{
+	normal, // orange
+	faster, // yellow
+	slower,  //blue
+	shorter, //green
+	longer  //red
+};
+class Food{ // modefting Food to be a class instead of a only a location
+public:
+	//construct first Food to be of type normal
+	Food():type(FoodType::normal){}
+
+	void SetFoodType(FoodType inType);
+	FoodType GetFoodType();
+
+
+	SDL_Point location;
+
+private:
+	FoodType  type;
+
+};
+
 
 class Snake {
  public:
@@ -17,6 +43,8 @@ class Snake {
   void Update();
 
   void GrowBody();
+  void SuperGrow();
+  std::thread SpawnThread();
   bool SnakeCell(int x, int y);
 
   Direction direction = Direction::kUp;
